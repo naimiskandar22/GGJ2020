@@ -30,32 +30,35 @@ public class PlayerController : MonoBehaviour
     Transform groundCheckRight;
 
     public Transform spawnpoint;
+
+    public GameObject gameOverText, restartBtn;
     void Start()
     {
+        gameOverText.SetActive(false);
+        restartBtn.SetActive(false);
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerFreeze = true;
-
+        Time.timeScale = 1;
         //groundCheck = GetComponent<Transform>();
 
     }
 
     private void FixedUpdate()
     {
-
-
-
-
-
     //Kill the enemy
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down);
 
-        if(hit != null)
+        if(hit)
         {
+            Debug.Log("HITSSS" + hit.collider.gameObject.name);
+
             if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
                 Debug.Log("die");
+
+                rb2d.velocity = new Vector2(rb2d.velocity.x, 1);
                 Destroy(hit.collider.gameObject);
             }
         }
@@ -82,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
                         if (isGrounded)
                         {
-                            animator.Play("player_run");
+                            animator.Play("character_walk");
                         }
                         rb2d.velocity = new Vector2(-runSpeed, rb2d.velocity.y);
                         spriteRenderer.flipX = true;
@@ -93,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
                         if (isGrounded)
                         {
-                            animator.Play("player_run");
+                            animator.Play("character_walk");
                         }
                         rb2d.velocity = new Vector2(runSpeed, rb2d.velocity.y);
                         spriteRenderer.flipX = false;
@@ -103,7 +106,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (isGrounded)
                         {
-                             animator.Play("player_idle");
+                             animator.Play("character_idle");
                         rb2d.velocity = new Vector2(0, rb2d.velocity.y);
                         }
            
@@ -114,13 +117,13 @@ public class PlayerController : MonoBehaviour
                         //Debug.Log("jump");
 
                         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
-                        animator.Play("player_jump");
+                        animator.Play("character_jump");
                     }
 
         }
         else
         {
-            animator.Play("player_jump");
+            animator.Play("character_jump");
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
         }
         
@@ -143,7 +146,13 @@ public class PlayerController : MonoBehaviour
         Life.health -= 1;
     }
 
-
-  
-
+   /* private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            gameOverText.SetActive(true);
+            restartBtn.SetActive(true);
+            gameObject.SetActive(false);
+        }
+    }*/
 }

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SoundManager
+  - turns
+  - Destruc
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Background
   - 
   - 
   - 
@@ -38,6 +42,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3580989009
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3301935785
     locked: 0

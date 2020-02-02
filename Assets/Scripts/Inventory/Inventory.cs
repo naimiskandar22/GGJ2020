@@ -165,6 +165,8 @@ public class Inventory : MonoBehaviour
             }
         }
 
+        Debug.Log("GS " + goodSequence);
+
         if (goodSequence == true)
         {
             if (winPrompt != null)

@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5909318, b: 0.3254717, a: 0.62352943}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5909318, b: 0.3254717, a: 0.62352943}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -311,12 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8716eb0c5c374db81a32a5ae65631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBind: 0
-  trackDisplay: {fileID: 6170911603867924633}
-  grayscaleMat: {fileID: 2100000, guid: cac91e177d1e14847aa0a335e2521160, type: 2}
-  boundTrack: {fileID: 0}
-  comboIndex: 0
-  playedDetachOnce: 0
 --- !u!1 &6170911603919599303
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,8 +476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  originalPos: {x: 0, y: 0}
-  comboIndex: 2
 --- !u!225 &6170911604291372221
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -810,12 +802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8716eb0c5c374db81a32a5ae65631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBind: 1
-  trackDisplay: {fileID: 6170911604340532454}
-  grayscaleMat: {fileID: 2100000, guid: cac91e177d1e14847aa0a335e2521160, type: 2}
-  boundTrack: {fileID: 0}
-  comboIndex: 0
-  playedDetachOnce: 0
 --- !u!1 &6170911604409340100
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,12 +962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8716eb0c5c374db81a32a5ae65631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBind: 0
-  trackDisplay: {fileID: 6170911604512420798}
-  grayscaleMat: {fileID: 2100000, guid: cac91e177d1e14847aa0a335e2521160, type: 2}
-  boundTrack: {fileID: 0}
-  comboIndex: 0
-  playedDetachOnce: 0
 --- !u!1 &6170911604698408905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,12 +1048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8716eb0c5c374db81a32a5ae65631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBind: 1
-  trackDisplay: {fileID: 6170911604698408906}
-  grayscaleMat: {fileID: 2100000, guid: cac91e177d1e14847aa0a335e2521160, type: 2}
-  boundTrack: {fileID: 0}
-  comboIndex: 0
-  playedDetachOnce: 0
 --- !u!1 &6170911604716603086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,12 +1378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8716eb0c5c374db81a32a5ae65631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBind: 0
-  trackDisplay: {fileID: 6170911605091125122}
-  grayscaleMat: {fileID: 2100000, guid: cac91e177d1e14847aa0a335e2521160, type: 2}
-  boundTrack: {fileID: 0}
-  comboIndex: 0
-  playedDetachOnce: 0
 --- !u!1 &6170911605187154089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,8 +1497,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  originalPos: {x: 0, y: 0}
-  comboIndex: 4
 --- !u!225 &6170911605275822056
 CanvasGroup:
   m_ObjectHideFlags: 0

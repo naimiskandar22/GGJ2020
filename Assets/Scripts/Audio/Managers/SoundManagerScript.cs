@@ -11,7 +11,7 @@ public class SoundManagerScript : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
         else if(instance != this)
         {
@@ -34,14 +34,6 @@ public class SoundManagerScript : MonoBehaviour
         SetMasterVolume(masterVolume.value);
         SetBGMVolume(bgmVolume.value);
         SetSFXVolume(sfxVolume.value);
-    }
-
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            //bgmAudioSource.time += 0.25f;
-        }
     }
 
     public void SetMasterVolume(float value)
